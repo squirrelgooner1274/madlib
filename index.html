@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>MadLibs</title>
+
+    </head>
+    <body>
+        <h1 class="main-title">Mad Lib</h1>
+<main>
+  <div class="selections-container">
+      <form id="myForm">
+      <label for="fname">Write a noun</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  
+<br>
+  <label for= "describe">Write a adjective</label><br>
+  <textarea id="describe" name="describe"></textarea><br><br>
+  
+    
+  <label for="verbs">Choose a verb:</label>
+      <input type= "radio" id="poopy" name="favColor" value="HTML">
+  <label for="poopy">ran</label>
+  <input type="radio" id="cool" name="favColor" value= "HTML">
+  <label for="cool">sprinted</label> <br><br>
+  
+
+  <label for= "describe2">Write ANOTHER verb</label><br>
+  <textarea id="describe2" name="describe2"></textarea><br>
+  
+
+    <br><label class="dropdown-text" for="peopledropdown">Choose a adjective:</label><br>
+    <select class="dropdown" name="people" id="peopledropdown">
+      <option value="Chat">--Please choose an option--</option>
+      <option value="Alex">Left</option>
+      <option value="Joey">Right</option>
+    </select><br>
+    
+    <br>
+<label for= "describe3">Write an adverb</label><br>
+  <textarea id="describe3" name="describe3"></textarea><br><br>
+  
+
+    <label class="dropdown-text" for="locationdropdown">Choose ANOTHER verb:</label>
+    <select class="dropdown" name="location" id="locationdropdown">
+      <option value="Pizza">--Please choose an option--</option>
+      <option value="Matt">hurtle</option>
+      <option value="Sam">guzzle</option>
+      <option value="Water">dashed</option>
+      <option value="Music">rushed</option>
+    </select> <br>
+    
+    <br>
+    <label for="cars">Choose an ending:</label>
+<select id="job" name="job">
+    <option value="Also stop being so indecisive<br>">Indecisive ending</option>
+  <option value="Everyone lived happily ever after">Happy ending</option>
+  <option value="Everyone died in a fire">Disaster ending</option>
+    <option value="Everyone got really sad and cried">Sad ending</option>
+  <option value=" Life went on as normal after that.">Boring ending</option>
+  <option value="*EXPLOSIONS* THE END"> Dramatic ending </option>
+</select>
+    
+<br>
+<label for= "describe4">Write ANOTHER noun</label><br>
+  <textarea id="describe4" name="describe4"></textarea><br><br>
+  
+
+   <input type="submit" value="submit">
+        </form>
+    </div>
+</main>
+  <div id="formContents"></div>
+    
+        <script>
+        var form = document.getElementById("myForm");
+       form.addEventListener("submit", function(event){
+       event.preventDefault();
+       var fname = document.getElementById("fname").value;
+       var describe = document.getElementById("describe").value; 
+       var verbs = document.querySelector('imput[name="verbs"]:checked'); 
+       var describe2 = document.getElementById("describe2").value; 
+       var peopledropdown = document.getElementById("peopledropdown").value; 
+       var describe3 = document.getElementById("describe3").value; 
+       var locationdropdown = document.getElementById("locationdropdown").value; 
+       var describe4 = document.getElementById("describe4").value; 
+
+        var formContents=document.getElementById("formContents");
+    formContents.innerHTML = "Thank you, ladies and  " + fname +"I'm so nervous. My is beating a  "+ describe + "a minute " + verbs + "I didn't prepare a" + describe2 + " I never expected to win this" + peopledropdown + ". I have so many people to" + describe3 + " First and foremost, my cool costar——who was always in my dressing " + locationdropdown + "to the top of the stairs. He crawled into the" + describe4 + ", into the light. He slammed the door shut behind him, twisted the lock, heart thundering.";
+       });
+        </script>
+
+    </body>
+</html>
